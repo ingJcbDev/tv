@@ -1,0 +1,15 @@
+$RUTA = GetBaseURI()."/app_modules/Requisiciones/reports/reportRequisiciones.inc.php";
+       
+       $this->salida .= "<script>";
+       $this->salida .= "var rem='';\n";
+       $this->salida .= "  function abrePdf(){\n";
+       $this->salida .= "    var nombre=\"\"\n";
+       $this->salida .= "    var url2=\"\"\n";
+       $this->salida .= "    var str=\"\"\n";
+       $this->salida .= "    var ALTO=screen.height\n";
+       $this->salida .= "    var ANCHO=screen.width\n";
+       $this->salida .= "    var nombre=\"REPORTE\";\n";
+       $this->salida .= "    var str =\"ANCHO,ALTO,resizable=no,location=yes, status=no,scrollbars=yes\";\n";
+       $this->salida .= "    var url2 ='$RUTA'+'?requisicion_id=$_REQUEST[requisicion]&codigo=';\n";
+       $this->salida .= "    rem = window.open(url2, nombre, str)};\n";
+       $this->salida .= " </script>";
